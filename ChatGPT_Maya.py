@@ -23,7 +23,7 @@ import maya.cmds as cmds
 
 
 class ChatChatAI:
-    
+
     def __init__(self):
 
         # UI
@@ -73,7 +73,7 @@ class ChatChatAI:
 
 
     def push_button_show(self, *args):
-        """ Runs and executes the returned generated code from GPT. """
+        """ Shows the generated code. """
 
         response = self.return_openai()
         self.show_code_ui(response)
@@ -81,7 +81,7 @@ class ChatChatAI:
 
 
     def push_button_run(self, *args):
-        """ Runs and executes the returned generated code from GPT. """
+        """ Executes the returned generated code from GPT. """
 
         response = f"{self.return_openai()}"
 
