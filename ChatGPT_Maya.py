@@ -19,6 +19,8 @@ import openai
 import maya.cmds as cmds
 
 
+
+
 class ChatChatAI:
 
     def __init__(self):
@@ -32,7 +34,7 @@ class ChatChatAI:
         self.window_BG_col = (0.12, 0.12, 0.12)
 
         # OpenAI settings.
-        self.START_PROMPT = "write maya python code that: "
+        self.START_PROMPT = "write maya python code with no instructions that: "
         self.ENGINE = "text-davinci-003"
         self.MAX_TOKENS = 1024
         self.NUMBERS = 1
@@ -66,6 +68,22 @@ class ChatChatAI:
         print(response)
 
         return response
+
+
+
+    def push_button_save(self, generated_code):
+        """ Save out python code to a default location. """
+
+        response = self.return_openai()
+        scripts_path = os.getenv("MAYA_SCRIPT_PATH").split(";")[0]
+
+        if os.path.exists(scripts_path) != True:
+            os.mkdir(scripts_path)
+
+        with open(scripts_path + '/maya_ai_gengen.py', 'w') as f:
+            f.write(response)
+
+        os.startfile(scripts_path)
 
 
 
@@ -130,16 +148,20 @@ class ChatChatAI:
 
         cmds.setParent('..')
 
-        cmds.gridLayout(numberOfColumns=2,
-                        cellWidthHeight=(150, 20))
+        cmds.gridLayout(numberOfColumns=3,
+                        cellWidthHeight=(self.UI_width_height[0] / 3, 20))
 
         cmds.button(label='Run',
                     bgc=self.buttonS_BG_col,
                     command=self.push_button_run)
 
-        cmds.button(label='Show Code',
+        cmds.button(label='Show Script',
                     bgc=self.buttonS_BG_col,
                     command=self.push_button_show)
+
+        cmds.button(label='Save Script',
+                    bgc=self.buttonS_BG_col,
+                    command=self.push_button_save)
 
         cmds.setParent('..')
 
