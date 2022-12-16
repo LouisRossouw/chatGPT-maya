@@ -11,6 +11,8 @@ To test out and play with it:
 - an openai API key is needed, so either directly add your key into the API variable below (Not recommended,
   your API keys should be kept private.) or put it in maya env under a variable called "OPENAI_API_KEY".
   
-<p align="center">
-<img src="https://user-images.githubusercontent.com/80905013/208155906-493cd318-524d-4d99-a4d9-aa2f317761dd.mp4" align="center" width="100%">
-</p>
+
+
+
+https://user-images.githubusercontent.com/80905013/208156463-1de79233-c148-47de-85fb-0147485ee37a.mp4
+
