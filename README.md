@@ -12,7 +12,5 @@ To test out and play with it:
   your API keys should be kept private.) or put it in maya env under a variable called "OPENAI_API_KEY".
   
 
-
-
-https://user-images.githubusercontent.com/80905013/208156463-1de79233-c148-47de-85fb-0147485ee37a.mp4
+https://user-images.githubusercontent.com/80905013/208193188-537dc08e-5482-4b8d-bf3f-7f66b3d34759.mp4
 
