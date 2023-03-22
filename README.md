@@ -7,21 +7,17 @@ but simple automation tasks works, specially if you communicate in a logical way
 
 To test out and play with it:
 
-1. 
-You need to navigate to your Program Files\Autodesk\Maya20**\bin,
+- You need to navigate to your Program Files\Autodesk\Maya20**\bin,
+ 
+- Inside this directory you need to open up a cmd terminal and run "mayapy -m pip install openai" to install openai python package into Maya (its important your cmd       terminals path points to the Program Files\Autodesk\Maya20**\bin path. )
 
-2. 
-Inside this directory you need to open up a cmd terminal and run "mayapy -m pip install openai" to install openai python package into Maya (its important your cmd terminals path points to the Program Files\Autodesk\Maya20**\bin path. )
+- you need to get an API key from https://platform.openai.com/account/api-keys
 
-3. 
-you need to get an API key from https://platform.openai.com/account/api-keys
 
-4. 
-go to my github account and copy the code into your Maya script editor,
-https://github.com/LouisRossouw/chatGPT-maya/blob/master/ChatGPT_Maya.py
-
-5. 
-either add your API key into an environment variable called "OPENAI_API_KEY", OR on line 44 where it says  API = os.getenv("OPENAI_API_KEY") , replace it with your new API key from openai (Not recommended, your API keys should be kept private.).
+- go to my github account and copy the code into your Maya script editor,
+  https://github.com/LouisRossouw/chatGPT-maya/blob/master/ChatGPT_Maya.py
+ 
+- either add your API key into an environment variable called "OPENAI_API_KEY", OR on line 44 where it says  API = os.getenv("OPENAI_API_KEY") , replace it with your new   API key from openai (Not recommended, your API keys should be kept private.).
 
 
 https://user-images.githubusercontent.com/80905013/208193188-537dc08e-5482-4b8d-bf3f-7f66b3d34759.mp4
